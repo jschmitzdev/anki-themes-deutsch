@@ -61,7 +61,7 @@
 <!-- meta info (tags and subdeck) -->
 <h1 class="divider dividerMetaInfo"><span>{{Layout metaInfo label}}</span></h1>
 <div class="sectionWrapper sectionMetaInfo">
-<span class="deckInfo smallest">{{#Subdeck}}{{Subdeck}}{{/Subdeck}}</span> <div id="tagContainer">{{Tags}}</div>
+<span class="deckInfo smallest">{{#Subdeck}}{{Subdeck}}{{/Subdeck}}</span> {{#Tags}}<div id="tagContainer">{{Tags}}</div>{{/Tags}}
 </div>
 <script>
     var tagEl = document.querySelector('#tagContainer');
