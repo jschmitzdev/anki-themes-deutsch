@@ -1,0 +1,38 @@
+
+<div class="sectionWrapper">
+    <div class="frontSideQuestionWrapper">
+        {{#Translated verb imperfective}}
+        <div>
+            <span class="serif question biggest">{{Translated verb imperfective with stress indicator}} </span><span class="answerAnnotations big">{{Translated verb imperfective annotation}}</span>
+            <p class="serif small pronounciationIPA">{{Translated verb imperfective IPA}}</p>
+        </div>    
+        {{/Translated verb imperfective}}
+        {{#Translated verb perfective}}
+        <div>
+            <span class="serif question biggest">{{Translated verb perfective with stress indicator}} </span><span class="answerAnnotations big">{{Translated verb perfective annotation}}</span>
+            <p class="serif small pronounciationIPA">{{Translated verb perfective IPA}}</p>
+        </div>
+        {{/Translated verb perfective}}
+    </div>
+    
+    
+    
+    {{#has_no_ipf}}
+        <p class="messages">No imperfective form</p>
+    {{/has_no_ipf}}
+    
+    {{#has_no_pf}}
+        <p class="messages">No perfective form</p>
+    {{/has_no_pf}}
+    
+    
+    <span class=".green_button">{{Pronunciation}}</span>
+</div>
+
+
+<h1 class="divider"><span>{{Layout front instruction label}}</span></h1>
+
+
+<div class="sectionWrapper">   
+    {{type:Source verb}}
+</div>

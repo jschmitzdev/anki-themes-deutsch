@@ -1,0 +1,152 @@
+<!-- Card front side -->
+<div class="sectionWrapper">
+    {{Image}}
+    {{#Source verb}}
+    <p class="sourceVerb biggest question">{{Source verb}}</p>
+    {{/Source verb}}
+</div>
+
+
+<!-- Traslation / Answer -->
+<h1 class="divider dividerFrontSide"><span>{{Layout translation label}}</span></h1>
+<div class="sectionWrapper">
+    <div class="frontSideQuestionWrapper">
+        {{#Translated verb imperfective}}
+        <div>
+            <span class="serif answer biggest">{{Translated verb imperfective with stress indicator}} </span><span class="answerAnnotations big">{{Translated verb imperfective annotation}}</span>
+            <p class="serif small pronounciationIPA">{{Translated verb imperfective IPA}}</p>
+        </div>    
+        {{/Translated verb imperfective}}
+        {{#Translated verb perfective}}
+        <div>
+            <span class="serif answer biggest">{{Translated verb perfective with stress indicator}} </span><span class="answerAnnotations big">{{Translated verb perfective annotation}}</span>
+            <p class="serif small pronounciationIPA">{{Translated verb perfective IPA}}</p>
+        </div>
+        {{/Translated verb perfective}}
+    </div>
+    
+    
+    
+    {{#has_no_ipf}}
+        <p class="messages">No imperfective form</p>
+    {{/has_no_ipf}}
+    
+    {{#has_no_pf}}
+        <p class="messages">No perfective form</p>
+    {{/has_no_pf}}
+    
+    
+    <span class=".green_button">{{Pronunciation}}</span>
+</div>
+
+
+<!-- Input correction -->
+<h1 class="divider dividerInputCorrection"><span>{{Layout input correction label}}</span></h1>
+<div class="sectionWrapper">
+    {{#Translated verb imperfective}}
+        {{type:Translated verb imperfective}}
+    {{/Translated verb imperfective}}
+    {{^Translated verb perfective}}
+        {{type:Translated verb perfective}}
+    {{/Translated verb perfective}}
+</div>
+
+
+<!-- conjugations -->
+<h1 class="divider dividerInputCorrection"><span>{{Layout conjugations label}}</span></h1>
+<div class="sectionWrapper sectionCojugations">
+    <div class="divTable" style="border: 1px solid #000;">
+        <div class="divTableBody">
+            <div class="divTableRow">
+                <div class="divTableCell divVerticalHeader">{{1. person singular pronoun}}</div>
+                <div class="divTableCell divRussianCell">{{1. person singular}}</div>
+                <div class="divTableCell divVerticalHeader">{{1. person plural pronoun}}</div>
+                <div class="divTableCell divRussianCell">{{1. person plural}}</div>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableCell divVerticalHeader">{{2. person singular pronoun}}</div>
+                <div class="divTableCell divRussianCell">{{2. person singular}}</div>
+                <div class="divTableCell divVerticalHeader">{{2. person plural pronoun}}</div>
+                <div class="divTableCell divRussianCell">{{2. person plural}}</div>
+            </div>
+            <div class="divTableRow">
+                <div class="divTableCell divVerticalHeader">{{3. person singular pronoun}}</div>
+                <div class="divTableCell divRussianCell">{{3. person singular}}</div>
+                <div class="divTableCell divVerticalHeader">{{3. person plural pronoun}}</div>
+                <div class="divTableCell divRussianCell">{{3. person plural}}</div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+<!-- Example sentences -->
+<h1 class="divider dividerExampleSentences"><span>{{Layout example sentences label}}</span></h1>
+<div class="sectionWrapper">
+    {{#translated example sentence 1}}
+        {{#example sentence 1 label}}
+            <h4>{{example sentence 1 label}}</h4>
+        {{/example sentence 1 label}}
+        
+        <span class="translatedSentence">{{translated example sentence 1}}</span> -   <span class="sourceSentence">{{source example sentence 1}}</span>
+    {{/translated example sentence 1}}
+
+    {{#translated example sentence 2}}
+        {{#example sentence 2 label}}
+            <h4>{{example sentence 2 label}}</h4>
+        {{/example sentence 2 label}}
+        
+        <span class="translatedSentence">{{translated example sentence 2}}</span> -   <span class="sourceSentence">{{source example sentence 2}}</span>
+    {{/translated example sentence 2}}
+</div>
+
+
+<!-- notes and external word info -->
+<h1 class="divider dividerNotes"><span>{{Layout notes label}}</span></h1>
+<div class="sectionWrapper sectionNotes">
+    {{#Notes}}
+    <div class="notes">
+        {{Notes}}
+    </div>
+    {{/Notes}}
+
+    {{#Translated verb imperfective}}
+        {{#URL}}
+        <a class="wordInfo smaller" href="{{URL}}">&#127760; {{Translated verb imperfective}}</a>
+        {{/URL}}
+
+        <!-- No URL available, so derive it from the back text -->
+        {{^URL}}
+        <a class="wordInfo smaller" href="https://en.openrussian.org/ru/{{Translated verb imperfective}}">openrussian.org: {{Translated verb imperfective}}</a>
+        {{/URL}}
+    {{/Translated verb imperfective}}
+    
+    {{^Translated verb imperfective}}
+        {{#URL}}
+        <a class="wordInfo smaller" href="{{URL}}">&#127760; {{Translated verb perfective}}</a>
+        {{/URL}}
+
+        <!-- No URL available, so derive it from the back text -->
+        {{^URL}}
+        <a class="wordInfo smaller" href="https://en.openrussian.org/ru/{{Translated verb perfective}}">openrussian.org: {{Translated verb perfective}}</a>
+        {{/URL}}
+    {{/Translated verb imperfective}}
+    
+</div>
+
+
+<!-- meta info (tags and subdeck) -->
+<h1 class="divider dividerMetaInfo"><span>{{Layout metaInfo label}}</span></h1>
+<div class="sectionWrapper sectionMetaInfo">
+<span class="deckInfo smallest">{{#Subdeck}}{{Subdeck}}{{/Subdeck}}</span> {{#Tags}}<div id="tagContainer">{{Tags}}</div>{{/Tags}}
+</div>
+<script>
+    var tagEl = document.querySelector('#tagContainer');
+    var tags = tagEl.innerHTML.split(' ');
+    var html = '';
+    tags.forEach(function(tag) {
+        var newTag = '<span class="tagInfo smallest">' + tag + '</span>';
+        html += newTag;
+    });
+    tagEl.innerHTML = html;
+</script>

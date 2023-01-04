@@ -1,0 +1,20 @@
+
+<div class="sectionWrapper">
+    {{Image}}
+    {{#Source verb}}
+    <p class="sourceVerb biggest question">{{Source verb}}</p>
+    {{/Source verb}}
+</div>
+
+
+<h1 class="divider"><span>{{Layout reverse front instruction label}}</span></h1>
+
+
+<div class="sectionWrapper">   
+    {{#Translated verb imperfective}}
+        {{type:Translated verb imperfective}}
+    {{/Translated verb imperfective}}
+    {{^Translated verb perfective}}
+        {{type:Translated verb perfective}}
+    {{/Translated verb perfective}}
+</div>
