@@ -23,19 +23,8 @@
     background: $backgroundColor;
 }
 
-.sourceNoun{
-    display: block;
-    text-align: center;
-    color: $questionColor;
-    margin-top: 12px;
-}
-
 code#typeans {
     font-family: $defaultCardFont;
-}
-
-input[type=text]{
-    width: 64% !important;
 }
 
 @media screen and (max-width: 480px) {

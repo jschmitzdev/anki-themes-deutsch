@@ -17,7 +17,7 @@
 <div class="sectionWrapper">
     {{Image}}
     {{#Source noun}}
-        <p class="sourceNoun biggest">{{Source noun}}</p>
+        <p class="sourceNoun biggest answer">{{Source noun}}</p>
     {{/Source noun}}
 </div>
 
@@ -40,12 +40,12 @@
     </div>
     {{/Notes}}
     {{#URL}}
-    <a class="wordInfo smaller" href="{{URL}}">Mehr Informationen</a>
+    <a class="wordInfo smaller" href="{{URL}}">&#127760; {{Translated noun}}</a>
     {{/URL}}
 
     <!-- No URL available, so derive it from the back text -->
     {{^URL}}
-    <a class="wordInfo smaller" href="https://en.openrussian.org/ru/{{Translated noun}}">{{Translated noun}}</a>
+    <a class="wordInfo smaller" href="https://en.openrussian.org/ru/{{Translated noun}}">openrussian: {{Translated noun}}</a>
     {{/URL}}
 </div>
 

@@ -13,9 +13,17 @@
     font-size: $baseFontSize - 8;
 }
 
+input[type=text]{
+    width: 64% !important;
+}
+
 .sectionWrapper {
     margin-top: 12px;
     margin-bottom: 12px;
+    margin-left: 48px;
+    @media screen and (max-width: 480px) {
+        margin-left: 28;
+    }
 }
 
 code#typeans{

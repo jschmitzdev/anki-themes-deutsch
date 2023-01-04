@@ -33,3 +33,9 @@ $clozeDecrement:        -2;
 .biggest {
     font-size: $baseFontSize + 6;
 }
+
+.sourceNoun, .sourceVerb{
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+}
