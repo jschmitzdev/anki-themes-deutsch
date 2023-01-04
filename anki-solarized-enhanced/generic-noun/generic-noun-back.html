@@ -1,3 +1,4 @@
+<!-- Card front side -->
 <div class="sectionWrapper">
     {{Image}}
     {{#Source noun}}
@@ -5,6 +6,8 @@
     {{/Source noun}}
 </div>
 
+
+<!-- Traslation / Answer -->
 <h1 class="divider dividerFrontSide"><span>{{Layout translation label}}</span></h1>
 <div class="sectionWrapper">
     <p class="serif biggest answer">
@@ -19,12 +22,15 @@
     <span class=".green_button">{{Pronunciation}}</p>
 </div>
 
+
+<!-- Input correction -->
 <h1 class="divider dividerInputCorrection"><span>{{Layout input correction label}}</span></h1>
 <div class="sectionWrapper">
     {{type:Translated noun}}
 </div>
 
-<!-- if an example sentence is available, show it -->
+
+<!-- example sentence -->
 {{#translated example sentence}}
 <h1 class="divider dividerExampleSentences"><span>{{Layout example sentences label}}</span></h1>
 <div class="sectionWrapper">
@@ -33,6 +39,7 @@
 {{/translated example sentence}}
 
 
+<!-- notes and external word info -->
 <h1 class="divider dividerNotes"><span>{{Layout notes label}}</span></h1>
 <div class="sectionWrapper sectionNotes">
     {{#Notes}}
@@ -50,11 +57,12 @@
     {{/URL}}
 </div>
 
+
+<!-- meta info (tags and subdeck) -->
 <h1 class="divider dividerMetaInfo"><span>{{Layout metaInfo label}}</span></h1>
 <div class="sectionWrapper sectionMetaInfo">
 <span class="deckInfo smallest">{{#Subdeck}}{{Subdeck}}{{/Subdeck}}</span> <div id="tagContainer">{{Tags}}</div>
 </div>
-
 <script>
     var tagEl = document.querySelector('#tagContainer');
     var tags = tagEl.innerHTML.split(' ');
