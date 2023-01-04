@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+div.sectionNotes{
+    text-align: left;
+    margin-left: 48px;
+    @media screen and (max-width: 480px) {
+        margin-left: 28;
+    }
+}
+
+div.notes {
+    font-size: $baseFontSize - 4;
+    text-align: left;
+    color: $translatedSentenceColor;
+}
+
+li ul {
+    font-family: $sansStack;
+    color: $base0;
+    text-align: left;
+}
+
+.serifcode {
+    font-family: $serifStack;
+    font-weight: 600;
+    color: lighten(desaturate($orange,20%),10%);
+}
+
+.myCodeClass {
+    font-family: $serifStack;
+    font-weight: 600;
+    color: lighten(desaturate($orange,20%),10%);
+}

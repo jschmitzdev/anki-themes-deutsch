@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+h3 {
+   font-family: futura;
+   font-size: 18px;
+   color: $base01;
+}
+
+//  use for example sentence heading (ipf/pf)
+h4 {
+	padding: 0px;
+	margin: 0px;
+	font-size:18px;
+	font-family: Futura, 'AvenirNext-DemiBold';
+	text-align: left;
+	color: $base0;
+}

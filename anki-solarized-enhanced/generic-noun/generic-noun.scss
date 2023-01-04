@@ -1,0 +1,48 @@
+@use 'sass:color';
+@import "../colors";
+@import "../fonts";
+@import "../animations";
+@import "../tables";
+@import "../links";
+@import "../questionanswer";
+@import "../examples";
+@import "../hrules";
+@import "../notes";
+@import "../buttons";
+@import "../miscellaneous";
+@import "../metainfo";
+
+/*
+* === DEFAULT CARD FORMATTING ===
+*/
+.card {
+    font-family: $defaultCardFont;
+    font-size: $baseFontSize;
+    text-align: center;
+    color: $base02;
+    background: $backgroundColor;
+}
+
+.sourceNoun{
+    display: block;
+    text-align: center;
+    color: $questionColor;
+    margin-top: 12px;
+}
+
+code#typeans {
+    font-family: $defaultCardFont;
+}
+
+input[type=text]{
+    width: 64% !important;
+}
+
+@media screen and (max-width: 480px) {
+    .serif {
+        font-size: $baseFontSize + 4;
+    }
+    .english {
+        font-size: $baseFontSize;
+    }
+}

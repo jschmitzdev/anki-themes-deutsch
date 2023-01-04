@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+.question {
+    color: $questionColor;
+}
+
+.answer {
+    color: $answerColor;
+}
+
+.answerAnnotations{
+    color: $pronunciationIPAColor;
+    font-style: italic;
+}
+
+.pronounciationIPA{
+    color: $pronunciationIPAColor;
+    margin-top: -20px;
+    margin-bottom: 24px;
+}
+
+.serif {
+    font-family: $serifStack;
+    font-weight: bold;
+}
+.english {
+    font-size: $baseFontSize + 4;
+    font-weight: bold;
+}

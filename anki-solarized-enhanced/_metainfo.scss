@@ -1,0 +1,18 @@
+@use 'sass:color';
+
+div.sectionMetaInfo{
+    text-align: left;
+    margin-left: 48px;
+
+    span{
+        color: $base01;
+        padding: 4px;
+        border-radius: 8px;
+        background-color: color.scale($base2, $lightness: 40%, $saturation: 10%);
+        margin-right: 4px;
+    }
+
+    #tagContainer{
+        margin-top: 8px;
+    }
+}

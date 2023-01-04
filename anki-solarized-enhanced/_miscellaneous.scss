@@ -1,0 +1,56 @@
+@charset "UTF-8";
+@use 'sass:color';
+
+.hint {
+    color: $cyanlite;
+    font-family: $serifStack;
+    font-size: $baseFontSize - 2;
+}
+
+.tags {
+    color: desaturate(lighten($blue, 10%),20%);
+    font-family: $sansStack;
+    font-size: $baseFontSize - 8;
+}
+
+.sectionWrapper {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+code#typeans{
+    .typeBad, .typeGood, .typeArrow, .typeMissed{
+        color: $base02;
+    }
+
+    .typeBad{
+        background-color: color.scale($orange, $alpha: -50%);
+    }
+
+    .typeGood{
+        background-color: color.scale($green, $alpha: -50%);
+    }
+
+    .typeMissed{
+        background-color: color.scale($base0, $alpha: -50%);
+    }
+}
+
+/*
+    This section targets AnkiDroid specifically
+*/
+.typeBad, .typeGood, .typeArrow, .typeMissed{
+    color: $base02;
+}
+
+.typeBad{
+    background-color: color.scale($orange, $alpha: -50%);
+}
+
+.typeGood{
+    background-color: color.scale($green, $alpha: -50%);
+}
+
+.typeMissed{
+    background-color: color.scale($base0, $alpha: -50%);
+}

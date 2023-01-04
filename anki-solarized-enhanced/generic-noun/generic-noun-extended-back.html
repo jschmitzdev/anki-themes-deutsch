@@ -1,0 +1,67 @@
+<div class="sectionWrapper">
+    {{Image}}
+    {{#Source noun}}
+    <p class="sourceNoun biggest">{{Source noun}}</p>
+    {{/Source noun}}
+</div>
+
+<h1 class="divider dividerFrontSide"><span>{{Layout translation label}}</span></h1>
+<div class="sectionWrapper">
+    <p class="serif biggest answer">
+        {{Translated noun with stress indicator}} <span class="answerAnnotations big">{{Translated noun annotations}}</span>
+    </p>
+    {{#PronunciationIPA}}
+    <p class="serif small pronounciationIPA">
+        {{PronunciationIPA}}
+    </p>
+    {{/PronunciationIPA}}
+
+    <span class=".green_button">{{Pronunciation}}</p>
+</div>
+
+<h1 class="divider dividerInputCorrection"><span>{{Layout input correction label}}</span></h1>
+<div class="sectionWrapper">
+    {{type:Translated noun}}
+</div>
+
+<!-- if an example sentence is available, show it -->
+{{#translated example sentence}}
+<h1 class="divider dividerExampleSentences"><span>{{Layout example sentences label}}</span></h1>
+<div class="sectionWrapper">
+    <span class="translatedSentence">{{translated example sentence}} - </span> <span class="sourceSentence">{{source example sentence}}</span>
+</div>
+{{/translated example sentence}}
+
+
+<h1 class="divider dividerNotes"><span>{{Layout notes label}}</span></h1>
+<div class="sectionWrapper sectionNotes">
+    {{#Notes}}
+    <div class="notes">
+        {{Notes}}
+    </div>
+    {{/Notes}}
+    {{#URL}}
+    <a class="wordInfo smaller" href="{{URL}}">Mehr Informationen</a>
+    {{/URL}}
+
+    <!-- No URL available, so derive it from the back text -->
+    {{^URL}}
+    <a class="wordInfo smaller" href="https://en.openrussian.org/ru/{{Translated noun}}">{{Translated noun}}</a>
+    {{/URL}}
+</div>
+
+<h1 class="divider dividerMetaInfo"><span>{{Layout metaInfo label}}</span></h1>
+<div class="sectionWrapper sectionMetaInfo">
+<span class="deckInfo smallest">{{#Subdeck}}{{Subdeck}}{{/Subdeck}}</span> <div id="tagContainer">{{Tags}}</div>
+</div>
+
+<script>
+    var tagEl = document.querySelector('#tagContainer');
+    var tags = tagEl.innerHTML.split(' ');
+    var html = '';
+    tags.forEach(function(tag) {
+        var newTag = '<span class="tagInfo smallest">' + tag + '</span>';
+        html += newTag;
+    });
+    tagEl.innerHTML = html;
+</script>

@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+//  default button
+span .replay-button {
+  margin: 0;
+
+  svg {
+    circle {
+      fill: none;
+      stroke: $base02;
+    }
+
+    path {
+      fill: $base02;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .replaybutton span svg {
+    stroke: $green;
+    fill: $green;
+    display: inline;
+    height: 32px;
+    width: 32px;
+  }
+
+  svg.playImage circle {
+    fill: none;
+    stroke: $green;
+  }
+}

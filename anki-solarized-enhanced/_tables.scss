@@ -1,0 +1,138 @@
+@charset "UTF-8";
+//
+// === DIV TABLE FORMATTING ===
+//
+.divTable {
+    display: table;
+    /*width: 100%;*/
+}
+.divTableRow {
+    display: table-row;
+}
+.divTableHeading {
+    background-color: $dthBackColor;
+    display: table-header-group;
+}
+.divTableCell,
+.divTableHead {
+    border: 1px solid $dthBorderColor;
+    //border-bottom: 1px #ff0000 solid;
+    //transform: scaleY(0.5);
+    display: table-cell;
+    padding: 3px 10px;
+    font-family: $sansStack;
+    color: $base02;
+}
+.divTableHeading {
+    background-color: $dthBackColor;
+    display: table-header-group;
+    font-weight: bold;
+}
+.divTableFoot {
+    background-color: $dthBackColor;
+    display: table-footer-group;
+    font-weight: bold;
+}
+.divTableBody {
+    display: table-row-group;
+}
+
+
+//
+// — Specific to Anki grammar tables —
+//
+//  divPerson should be deprecated
+.divPerson {
+    background-color: sandybrown;
+    font-family: $sansStack;
+    color: $base02;
+    font-size: $baseFontSize - 4;
+}
+.divHeader {
+    background-color: orange;
+    font-family: $sansStack;
+    font-size: $baseFontSize - 4;
+}
+.divVerticalHeader {
+    background-color: sandybrown;
+    color: $base02;
+    font-family: $sansStack;
+    font-size: $baseFontSize - 4;
+}
+.divRussianCell {
+    font-family: $serifStack;
+    font-size: $baseFontSize - 4;
+    background-color: $drcBackground;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+.tg td {
+    font-family: $sansStack;
+    font-size: $baseFontSize - 6;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $dthBorderColor;
+    overflow: hidden;
+    word-break: normal;
+}
+.tg th {
+    font-family: $sansStack;
+    font-size: $baseFontSize - 6;
+    font-weight: normal;
+    padding: 10px 5px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: $dthBorderColor;
+    overflow: hidden;
+    word-break: normal;
+}
+.tg .tdRussian {
+    font-size: $baseFontSize - 2;
+    font-family: $serifStack;
+    background-color: $drcBackground;
+    vertical-align: top
+}
+.tg .thHeader {
+    background-color: $tableHeaderBackgroundColor;
+    font-family: $sansStack;
+    font-size: $baseFontSize - 4;
+    color: $base02;
+}
+.tg .tdVerticalHeader {
+    background-color: $tableVerticalHeaderBackgroundColor;
+    color: $base02;
+    font-family: $sansStack;
+    font-size: $baseFontSize - 4;
+}
+
+//  on mobile devices or small window sizes
+//  compress the text a bit
+@media screen and (max-width: 480px) {
+    //  divPerson should be deprecated
+    .divPerson {
+        font-size: $baseFontSize - 8;
+    }
+    .divHeader {
+        font-size: $baseFontSize - 8;
+    }
+    .divVerticalHeader {
+        font-size: $baseFontSize - 8;
+    }
+    .divRussianCell {
+        font-family: $sansStack;
+        font-size: $baseFontSize - 8;
+    }
+    .tg .tdVerticalHeader {
+        font-size: $baseFontSize - 8;
+    }
+    .tg .thHeader {
+        font-size: $baseFontSize - 8;
+    }
+    .tg .tdRussian {
+        font-size: $baseFontSize - 4;
+    }
+}

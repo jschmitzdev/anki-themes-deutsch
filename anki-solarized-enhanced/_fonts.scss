@@ -1,0 +1,35 @@
+@charset "UTF-8";
+//
+// === FONTS ===
+//
+
+$baseFontSize:          20px;
+$serifStack:            Georgia,'PT Serif','Times New Roman', serif;
+$sansStack:             'Futura', arial, 'PT Sans';
+$translatedSentenceFont:   'PT Serif', 'Times New Roman';
+$defaultCardFont:       $sansStack;
+$clozeDecrement:        -2;
+
+.small {
+    font-size: $baseFontSize - 2;
+}
+
+.smaller {
+    font-size: $baseFontSize - 4;
+}
+
+.smallest {
+    font-size: $baseFontSize - 6;
+}
+
+.big {
+    font-size: $baseFontSize + 2;
+}
+
+.bigger {
+    font-size: $baseFontSize + 4;
+}
+
+.biggest {
+    font-size: $baseFontSize + 6;
+}

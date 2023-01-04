@@ -1,0 +1,54 @@
+@charset "UTF-8";
+
+//
+// === COLOURS ===
+//
+
+//
+// - Basic fonts
+//
+$green:             #859a01;
+$cyan:              #2aa198;
+$cyanlite:          #88a8a6;    //  deemphasized cyan (?hints)
+$orange:            #cb4b16;
+$blue:              #268bd2;
+$base0:             #839496;
+$base1:             #93a1a1;
+$base00:            #657b83;
+$base01:            #586e75;
+$base03:            #002b36;
+$base02:            #073642;    //  darkest
+$base2:             #eee8d5;    //  background color darker
+$base3:             #fdf6e3;    //  background color lighter
+
+$deemphasized:      $base00;
+$clozeColor:        #b58900;
+
+//
+//  - Table colors
+//
+$dthBackColor:      #EEE;
+$dthBorderColor:    #F5DEB3;
+$drcBackground:     #FFEFD5;    //  table cell Russian contents
+$tableHeaderBackgroundColor:            orange;
+$tableVerticalHeaderBackgroundColor:    sandybrown;
+
+//
+//  - Card background colors
+//
+$backgroundColor:   $base2;
+$gradientStart:     #fdf6e3;
+$gradientEnd:       #eee8d5;
+
+//
+//  - Question and answer colors
+//
+$questionColor:     $orange;
+$answerColor:       $cyan;
+$pronunciationIPAColor: $cyanlite;
+
+//
+//  - Sentence colours
+//
+$translatedSentenceColor:   $base01;
+$sourceSentenceColor:   $base0;

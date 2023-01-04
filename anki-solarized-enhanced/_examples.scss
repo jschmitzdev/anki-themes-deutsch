@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.translatedSentence {
+    font-family: $translatedSentenceFont;
+    font-size: $baseFontSize - 2;
+    font-weight: bold;
+    color: $translatedSentenceColor;
+}
+
+.sourceSentence {
+    font-family: $sansStack;
+    font-size: $baseFontSize - 2;
+    //font-weight: bold;
+    font-style: italic;
+    color: $sourceSentenceColor;
+}

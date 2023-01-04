@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+h1 {
+  position: relative;
+  margin-top: 20px;
+  color: $base0;
+}
+
+h1.divider {
+  margin-top: 0;
+  font-size: $baseFontSize - 6;
+  text-align: left;
+}
+
+h1.divider:before,
+h1.divider:after {
+  content: "";
+  display: block;
+  border-top: solid 1px $base1;
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+}
+
+h1.divider span {
+  color: $base1;
+  background: $backgroundColor;
+  padding: 0 16px;
+  position: relative;
+  z-index: 5;
+  margin-left: 32px;
+
+  @media screen and (max-width: 480px) {
+    padding: 0 12px;
+    margin-left: 16px;
+  }
+}
+
+hr.style4 {
+  border-top: 1px dotted #93a1a1;
+}
