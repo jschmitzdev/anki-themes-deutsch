@@ -2,10 +2,12 @@
 
 .question {
     color: $questionColor;
+    font-weight: bold;
 }
 
 .answer {
     color: $answerColor;
+    font-weight: bold;
 }
 
 .answerAnnotations{

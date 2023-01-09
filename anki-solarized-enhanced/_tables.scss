@@ -60,7 +60,6 @@
     font-size: $baseFontSize - 4;
 }
 .divRussianCell {
-    font-family: $serifStack;
     font-size: $baseFontSize - 4;
     background-color: $drcBackground;
 }
@@ -92,7 +91,7 @@
 }
 .tg .tdRussian {
     font-size: $baseFontSize - 2;
-    font-family: $serifStack;
+    font-family: $sansStack;
     background-color: $drcBackground;
     vertical-align: top
 }
